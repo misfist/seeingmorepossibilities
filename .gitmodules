@@ -1,0 +1,3 @@
+[submodule "wp-content/themes/seeingmorepossbilities"]
+	path = wp-content/themes/seeingmorepossbilities
+	url = https://github.com/misfist/seeingmorepossibilities-theme.git
