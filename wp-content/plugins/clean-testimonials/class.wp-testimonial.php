@@ -68,8 +68,7 @@ final class WP_Testimonial {
 					<img src="<?php echo $image[0]; ?>" width="<?php echo $image[1]; ?>" height="<?php echo $image[2]; ?>" />
 					<?php endif; ?>
                     
-                    <p>
-					<?php
+                    <p><?php
 
 					if( isset( $this->word_limit ) && $this->word_limit > 0 ) {
 
@@ -79,11 +78,9 @@ final class WP_Testimonial {
 						) . '... <a href="' . get_permalink( $this->ID ) . '">Read More</a>';
 
 					}
-					else echo $this->post_content;
+					else echo trim($this->post_content);
 
-					?>
-                    
-                    </p>    
+					?></p>    
                     
                     <div class="testimonial-client meta">
                         <cite class="testimonial-client-name"><?php echo $this->client; ?></cite>
