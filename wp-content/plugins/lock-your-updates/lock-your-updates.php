@@ -11,7 +11,7 @@
  * Plugin Name:       Lock Your Updates Plugins/Themes Manager
  * Plugin URI:        http://wpdreamer.com/plugins/lock-your-updates/
  * Description:       Allows you to lock your plugins and themes from being updated and keep notes on why they're being locked.
- * Version:           1.0
+ * Version:           1.1
  * Author:            Rachel Carden
  * Author URI:        http://wpdreamer.com
  * Text Domain:       lock-your-updates
