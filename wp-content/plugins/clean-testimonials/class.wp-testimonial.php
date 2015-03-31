@@ -98,6 +98,13 @@ final class WP_Testimonial {
 
 			</div>
 
+				<script>
+    
+				jQuery( "div.category-testimonial" ).parent().addClass( "type-testimonial" );
+				jQuery( "div.category-quote" ).parent().addClass( "type-quote" );
+
+				</script>
+
 			<?php
 
 			// Allow plugins and themes to filter the default testimonial render markup
