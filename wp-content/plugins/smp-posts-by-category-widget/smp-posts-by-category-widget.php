@@ -99,7 +99,7 @@ function smp_get_category_posts() {
 			$html .= '<li id="post-' . $post->ID . '">';
 			$html .=  '<a href="' . get_permalink( $post->ID ) . '"><h4 class="post-title">' . $post->post_title . '</h4></a>';
 			//$html .= get_the_excerpt($post->ID);
-			$html .= $excerpt;
+			$html .= strip_shortcodes($excerpt);
 			$html .= '</li>';
 		}
 		$html .= '</ul>';
@@ -120,13 +120,13 @@ function smp_auto_excerpt($text, $permalink) {
 		$text = str_replace(']]>', ']]&gt;', $text);
 	  }
 
-	$excerpt_length = apply_filters('excerpt_length', 15);
+	$excerpt_length = apply_filters('excerpt_length', 20);
 	$excerpt_more = apply_filters('excerpt_more', ' <a href="' . $permalink . '" class="read-more">Read More</a>');
-	$text = wp_trim_words( $text, $excerpt_length, $excerpt_more );
-	return apply_filters('wp_trim_excerpt', $text, $raw_excerpt);
+	$excerpt = wp_trim_words( $text, $excerpt_length, $excerpt_more );
+	return apply_filters('wp_trim_excerpt', $excerpt, $raw_excerpt);
 }
  
-//add_filter('get_the_excerpt', 'smp_auto_excerpt');
+add_filter('get_the_excerpt', 'smp_auto_excerpt');
 
 
 ?>
